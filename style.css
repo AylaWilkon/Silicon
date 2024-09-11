@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* ovan ska endast finns med om mobilversionen är aktuell */
+} 
+
+body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --color-gray900: #0B0F19; 
+  --color-gray800: #33354D;
+  --color-gray700: #565973;
+  --color-gray600: #9397AD;
+  --color-gray500: #B4B7C9;
+  --color-gray400: #D4D7E5;
+  --color-gray300: #E2E5F1;
+  --color-gray200: #EFF2FC;
+  --color-gray100: #F3F6FF;
+  --color-primary: #6366F1;
+  --color-white: #fff;
+  --color-gradient-linear: #6366F1 #8B5CF6 #D946EF;
+  --system-color-error: #EF4444;
+  --system-color-success: #22C55E;
+  --system-color-warning: #FFBA08;
+  --system-color-info: #4C82F7;
+
+  --container-padding: 1rem;
+  --transition-time: all 0.2s;
+}
+
+
+a {
+  color: var(--color-gray800);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-gray800);
+  text-decoration: underline;
+}
+
+.btn-toggle-switch .label{
+  display: none;
+  /* darkmode, ska endast synas i desktop */
+}
+
+.btn-mobile{
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+
+.navbar {
+  display: none;
+}
+
+.nav-link {
+  color: var(--color-gray800);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.active{
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gray500);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.auth-signin:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.auth-signin p{
+  margin-left: 0.5rem;
+}
+
+.btn-toggle-switch{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-switch input{
+  opacity: 0;
+}
+
+.toggle-switch{
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.toggle-switch input:checked + .slider{
+  background-color: var(--color-primary);
+}
+
+.toggle-switch input:focus + .slider{
+  box-shadow: 0 0 1px var(--color-primary);
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(18px);
+  background-color: var(--color-white);
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-gray600);
+  transition: all 0.2s;
+}
+
+.toggle-switch .slider:before{
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: var(--color-white);
+  transition: all 0.2s;
+}
+
+.toggle-switch .slider.round{
+  border-radius: 35px;
+}
+
+.toggle-switch .slider.round:before{
+  border-radius: 50%;
+}
+
+#auth-signin{
+  display: none;
+  cursor: pointer;
+}
+
+header .container{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas: "logo sw mobile";
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header-box{
+  background: linear-gradient(#db46ef00, #6365f117);
+}
+
+.arrow {
+  border: solid var(--color-gray800);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#down-arrow{
+  background-color: var(--color-white);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.19);
+}
+
+#down-arrow:hover{
+  background-color: var(--color-gray500);
+}
+
+.container-header{
+  color: var(--color-gray900);
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: 720px;
+  }
+
+  .btn-toggle-switch .label{
+    display: block;
+  }
+
+  header .container{
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1320px;
+  }
+
+  header .container {  
+    grid-template-columns: auto 1fr auto auto;
+    gap: 3rem;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  #auth-signin{
+    display: block;
+  }
+
+  .btn-mobile{
+    display: none;
+  }
+
+}
