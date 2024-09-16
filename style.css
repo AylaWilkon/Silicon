@@ -75,6 +75,7 @@ a:hover {
   background-color: transparent;
   border: none;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .navbar {
@@ -258,6 +259,29 @@ footer {
   }
 }
 
+#brands {
+  display: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .container-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.brand-box{
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+  height: 100px;
+  width: 196px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px){
   .container {
     max-width: 720px;
@@ -276,7 +300,17 @@ footer {
       display: block;
     }
   }
+
+  #brands {
+    display: block;
+  }
+
+  #brand-1, #brand-2{
+    display: none;
+  }
 }
+
+
 
 @media (min-width: 1400px) {
   .container{
@@ -298,6 +332,10 @@ footer {
 
   .btn-mobile{
     display: none;
+  }
+
+  #brand-1, #brand-2{
+    display: flex;
   }
 
 }
