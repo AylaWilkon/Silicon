@@ -19,6 +19,26 @@ body {
   font-size: 16px;
 }
 
+.h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.h4{
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.h5{
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  color: var(--color-gray600);
+}
+
 .wrapper{
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -50,11 +70,17 @@ body {
   --system-color-success: #22C55E;
   --system-color-warning: #FFBA08;
   --system-color-info: #4C82F7;
+  --filter-shadow: drop-shadow(0 0 0.75rem rgb(43, 23, 80));
+
+  --br-m: 0.375em;
+  --br-l: 0.5em;
 
   --container-padding: 1rem;
+  --section-spacing: 4rem;
   --transition-time: all 0.2s;
 }
 
+/* NAVBAR START */
 
 a {
   color: var(--color-gray800);
@@ -108,6 +134,7 @@ a:hover {
   align-items: center;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -187,6 +214,8 @@ a:hover {
   display: none;
   cursor: pointer;
 }
+
+/* NAVBAR END */
 
 header .container{
   display: grid;
@@ -339,7 +368,7 @@ header .container{
     right: 100%;
     width: 70%;
     height: auto;
-    filter: drop-shadow(0 0 0.75rem rgb(43, 23, 80));
+    filter: var(--filter-shadow);
 
     @media (min-width: 1400px)
     {
@@ -357,7 +386,7 @@ header .container{
     right: 0;
     width: 70%;
     height: auto;
-    filter: drop-shadow(0 0 0.75rem rgb(43, 23, 80));   
+    filter: var(--filter-shadow); 
 
     @media (min-width: 1400px)
     {
@@ -428,6 +457,62 @@ header .container{
   align-items: center;
 }
 
+/* FEATURES START */
+
+.features{
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+    .iphone{
+      display: none;
+      filter: var(--filter-shadow); 
+    }
+
+    .features-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .features-card{
+      display: flex;
+      text-align: start;
+      gap: 1rem;
+      align-items: flex-start;      
+    }
+
+    .icon-container{
+      padding: 1rem;
+      border-radius: var(--br-l);
+      flex-shrink: 0;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .features-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 3rem;
+      }
+    }
+
+    @media (min-width: 1400px){
+      text-align: start;
+      .container{
+        display: flex;
+        gap: 10rem;
+      }
+      .iphone{
+        display: block;
+      }
+      .text{
+        flex: 1;
+      }
+    }
+}
+
+
+
 .phone-card{
   float: left;
   padding-top: 7rem;
@@ -460,7 +545,7 @@ header .container{
   align-items: end;
 }
 
-.container-how{
+#how-does{
   background-color: var(--color-gray100);
 }
 
@@ -522,6 +607,48 @@ header .container{
   }
 
 }
+
+/* HOW DOES IT WORK START */
+
+.how-to{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: var(--color-gray100);
+  text-align: center;
+
+  .carousel{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .carousel-item{
+    filter: var(--filter-shadow); 
+  }
+
+  .fade{
+    opacity: 0.7;
+  }
+
+  .fade:hover{
+    opacity: 1.0;
+    transition: .7s ease-in;
+  }
+
+}
+
+/* HOW DOES IT WORK END */
+
+
+
+/* BANK AND PAYMENTS START */
+
+.transfer-check{
+  list-style-type: none;
+}
+
+
+
+/* BANK AND PAYMENTS SLUTET */
 
 .wrapper {
   height: 100svh;
