@@ -24,6 +24,16 @@ body {
   font-weight: 800;
 }
 
+.h2{
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.h3{
+  font-size: 2rem;
+  font-weight: 800;
+}
+
 .h4{
   font-size: 1.5rem;
   font-weight: 800;
@@ -32,6 +42,12 @@ body {
 .h5{
   font-size: 1.25rem;
   font-weight: 800;
+}
+
+.underline{
+  color: var(--color-gray700);
+  font-weight: 400;
+  font-size: 1.10rem;
 }
 
 .text-lg{
@@ -642,10 +658,192 @@ header .container{
 
 /* BANK AND PAYMENTS START */
 
-.transfer-check{
-  list-style-type: none;
+
+.upper-money-transfer{ 
+  display: flex;
+  justify-content: space-around;  
+  padding-top: 7rem;
+
+  .transfer-check{
+    justify-content: space-around;
+    gap: 10rem 3rem;
+  }
+
+  .upper-money-transfer-text{
+    float: left;
+  }
+
+  .money-manage{
+    float: right;
+  } 
+
+  .check-mark{
+    padding: .5rem;
+  }
+
 }
 
+.transfer-check{
+  list-style-type: none;
+  padding: 0 0 0 0;
+  padding-bottom: 1rem;
+}
+
+.fa-circle-check{
+  color: var(--color-primary);
+  padding-right: .7rem;
+}
+
+.lower-money-transfer{
+  display: flex;
+  justify-content: space-around;  
+  padding-top: 7rem;
+
+  .receive-contacts{
+    float: left;
+  }
+  
+  .lower-money-transfer-text{
+    float: right;
+  }
+
+  .icon-text-container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+
+}
+
+/* REVIEW BÖRJAN */
+
+#background-review{
+  background-color: var(--color-gray100);
+}
+
+.container-review{
+  display: flex;
+  margin: 1rem;
+}
+
+/* REVIEW SLUTET */
+
+
+/* FAQ Börjar */
+
+.container-faq {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+}
+
+.faq-container {
+  flex: 2;
+  background: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-gray900);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #ebebeb;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-container i {
+  margin-right: 10px;
+  font-size: 26px;
+}
+
+.contact-button {
+  flex: 1;
+  margin: 0 5px; /* Adjust spacing between buttons */
+  padding: 10px;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: var(--color-gray400);
+}
+
+#phone-button{
+  color: var(--color-primary);
+}
+
+#chat-button{
+  color: var(--system-color-success);
+}
+
+.fa-phone-volume{
+  color: var(--color-primary);
+}
+
+.fa-comment-dots{
+  color: var(--system-color-success);
+}
+
+.faq-item {
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: var(--color-gray300);
+}
+
+.arrow {
+  transition: transform 0.3s;
+  transform: rotate(45deg);
+}
+
+.arrow-background{
+  display: inline-block;
+  width: 40px;  /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background-color: var(--color-gray100); /* Gray background */
+  border-radius: 50%; /* Makes it circular */
+  text-align: center; /* Centers the arrow */
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: var(--color-white);
+  font-size: 14px;
+  color: var(--color-gray700);
+}
+
+/* FAQ slutar */
 
 
 /* BANK AND PAYMENTS SLUTET */
