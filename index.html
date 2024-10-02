@@ -197,8 +197,10 @@
 
 <!-- HOW DOES IT WORK -->
 
-<section area-label="How does it work" class="how-to">
-  <div class="container">
+<section id="how-does-it-work">
+
+  <div class="how-to">
+  
     <h2 class="h1">How Does It Work?</h2>
 
     <div class="carousel">
@@ -217,7 +219,6 @@
       <h3 class="h4">Latest transaction history</h3>
       <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. <br> Arcu sociis tristique quisque hac in consectetur condimentum.</p>
     </div>
-
   </div>
 </section>
 
@@ -253,11 +254,11 @@
           <div class="icon-text-container">
             <div class="group1">
             <img class="icon-payments" src="images/icon-card.svg">            
-            <p>Manage your payments online. <br> Mollis congue egestas <br> egestas fermentum fames.</p>
+            <p class="underline">Manage your payments online. <br> Mollis congue egestas <br> egestas fermentum fames.</p>
             </div>
             <div class="group2">
             <img class="icon-payments" src="images/icon-wallet.svg">
-            <p>A elementur and imperdiet enim, <br> pretium etiam facilisi aenean <br> quam mauris.</p>
+            <p class="underline">A elementur and imperdiet enim, <br> pretium etiam facilisi aenean <br> quam mauris.</p>
             </div>
           </div>  
 
@@ -277,15 +278,15 @@
 
   <div class="container-review">
 
-    <div class="headline-review">
-      <h2 class="h1">Clients are <br> Loving Our App</h2>
+    <div class="heading-review">
+      <h2 class="h1">Clients are Loving Our App</h2>
     </div>
 
-    <div class="review-1">
+    <div class="review">
       <img src="images/review-1.png">
     </div>
 
-    <div class="review-2">
+    <div class="review">
       <img src="images/review-2.png">
     </div>
   </div>
@@ -302,23 +303,29 @@
       <h2 class="h3">Any questions? <br> Check out the FAQs</h2>
       <h3 class="underline">Still have unanswered questions and need to get in touch?</h3>
 
-    <div class="to-the-left">
+    <div class="questions">
+      <div class="to-the-left">
 
-      <div class="button-container">
-        <i class="fa-solid fa-phone-volume"></i>
-        <p>Still have questions?</p>
-          <button class="contact-button" id="phone-button">Contact us<i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-    </div>
-
-
-    <div class="to-the-right">
-
-          <div class="button-container">
-          <i class="fa-solid fa-comment-dots"></i>
-          <p>Don't like phone calls?</p>
-          <button class="contact-button" id="chat-button">Contact us<i class="fa-solid fa-arrow-right"></i></button>
+        <div class="button-container">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p id="text-1">Still have questions?</p>
+            <button class="contact-button" id="phone-button">Contact us<i class="fa-solid fa-arrow-right"></i></button>
+          </div>
         </div>
+      </div>
+
+
+      <div class="to-the-right">
+
+            <div class="button-container">
+            <div>
+              <i class="fa-solid fa-comment-dots"></i>
+              <p id="text-2">Don't like phone calls?</p>
+              <button class="contact-button" id="chat-button">Contact us<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 
@@ -403,12 +410,22 @@
 
 <!-- SUBSCRIBE MAIL USER INPUT -->
 
-<div class="wrapper">
 
-  <div class="input-group">
-    <img class="icon" src="images/bx-envelope.svg" alt="envelope icon">
-    <input class="form-input email" type="text" placeholder="Your Email">
-    <button class="btn-sub">Subscribe</button>
+  <div class="subscribe-container">
+    <div class="bell">
+    <img src="images/notification.svg">
+    </div>
+
+    <div class="text-newsletter">
+    <h3 class="h4">Subscribe to our newsletter to stay <br> informed about latest updates</h3>
+    </div>
+
+    <div class="input-group">
+      <img class="icon" src="images/bx-envelope.svg" alt="envelope icon">
+      <input class="form-input email" type="text" placeholder="Your Email">
+      <button class="btn-sub">Subscribe</button>
+    </div>
+
   </div>
 
   <!-- SUBSCRIBE SLUTET -->
