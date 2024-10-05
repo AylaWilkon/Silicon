@@ -896,9 +896,6 @@ h1 {
   font-size: 26px;
 }
 
-.faq-item {
-}
-
 .faq-question {
   cursor: pointer;
   padding: 0.75rem;
@@ -921,17 +918,21 @@ h1 {
   transform: rotate(45deg);
 }
 
+.arrow:hover {
+  color: var(--color-white);
+}
+
 .arrow:visited {
   color: var(--color-white);
 }
 
 .arrow-background{
   display: inline-block;
-  width: 40px;  /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
+  width: 40px; 
+  height: 40px; 
   background-color: var(--color-gray100); 
-  border-radius: 50%; /* Makes it circular */
-  text-align: center; /* Centers the arrow */
+  border-radius: 50%; 
+  text-align: center; 
 }
 
 .fa-arrow-right:before {
